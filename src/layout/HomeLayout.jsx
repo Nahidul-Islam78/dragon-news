@@ -1,6 +1,8 @@
 import React from 'react';
 import { Outlet } from 'react-router';
 import Header from '../component/Header';
+import LeftLayout from './LeftLayout';
+import RightLayout from './RightLayout';
 
 const HomeLayout = () => {
   return (
@@ -8,12 +10,16 @@ const HomeLayout = () => {
       <header>
         <Header></Header>
       </header>
-      <main>
-        <section className='leftNav'></section>
-        <section className='main'>
+      <main className=' grid grid-cols-12 w-11/12 mx-auto my-4'>
+        <aside className='leftNav col-span-3'>
+          <LeftLayout></LeftLayout>
+        </aside>
+        <section className='main col-span-6'>
           <Outlet></Outlet>
         </section>
-        <section className='rightNav'></section>
+        <aside className='rightNav col-span-3'>
+          <RightLayout></RightLayout>
+        </aside>
       </main>
     </div>
   );
