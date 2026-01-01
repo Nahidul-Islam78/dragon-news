@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './../assets/logo.png'
 import { format } from 'date-fns';
 import MarqueeLayout from './marquee/MarqueeLayout';
+import Naver from './navber/Naver';
 
 const Header = () => {
   return (
@@ -13,10 +14,11 @@ const Header = () => {
           {format(new Date(), 'EEEE, MMMM MM, yyyy')}
         </p>
       </div>
-      <section className='marquee w-11/12 mx-auto '>
-        <MarqueeLayout>
-          
-        </MarqueeLayout>
+      <section className="marquee w-11/12 mx-auto mt-4">
+        <MarqueeLayout></MarqueeLayout>
+      </section>
+      <section className="naver w-11/12 mx-auto mt-4">
+        <Naver></Naver>
       </section>
     </div>
   );
