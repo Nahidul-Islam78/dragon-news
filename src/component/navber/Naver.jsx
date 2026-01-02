@@ -9,8 +9,8 @@ const Naver = () => {
       <div>
         <ul className="flex justify-center items-center gap-4 text-accent">
           <NavLink to="/">Home</NavLink>
-          <NavLink to="/">About</NavLink>
-          <NavLink to="/">Career</NavLink>
+          <NavLink to="/about">About</NavLink>
+          <NavLink to="/career">Career</NavLink>
         </ul>
       </div>
       <div className="flex justify-center items-center gap-2">
