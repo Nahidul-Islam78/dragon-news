@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useLoaderData, useParams } from 'react-router';
+import News from '../component/News';
 
 const CategoryNews = () => {
   const[news,setNews]=useState([])
@@ -8,7 +9,7 @@ const CategoryNews = () => {
   useEffect(() => {
     if (id == '0') {
       setNews(data);
-      return
+      return;
     } else if (id == '1') {
       const categoryNews = data.filter(news => news.others.is_today_pick == true);
       setNews(categoryNews);
@@ -21,8 +22,13 @@ const CategoryNews = () => {
   },[id,data])
   return (
     <div>
-      <p>categories news-{id}</p>
-      <p>total news-{news.length}</p>
+      <p>Dragon News </p>
+
+      <div>
+        {news.map(singleNews => (
+          <News key={singleNews.id} singleNews={singleNews}></News>
+        ))}
+      </div>
     </div>
   );
 };

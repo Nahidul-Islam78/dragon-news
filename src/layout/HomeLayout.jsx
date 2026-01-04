@@ -10,7 +10,7 @@ const HomeLayout = () => {
       <header>
         <Header></Header>
       </header>
-      <main className=' grid grid-cols-12 w-11/12 mx-auto mt-20'>
+      <main className=' grid grid-cols-12 w-11/12 mx-auto mt-20 gap-4'>
         <aside className='leftNav col-span-3'>
           <LeftLayout></LeftLayout>
         </aside>
